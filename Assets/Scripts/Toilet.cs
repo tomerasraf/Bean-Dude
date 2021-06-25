@@ -14,9 +14,9 @@ public class Toilet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (_fart.curFart > _fart.minFart)
+            if (_fart.curFart > 0)
             {
-                _fart.curFart--;
+                _fart.curFart -= 10;
                 _fartBar.SetFart(_fart.curFart);
             }
             Destroy(gameObject);

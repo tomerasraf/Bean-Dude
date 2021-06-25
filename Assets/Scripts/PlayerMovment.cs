@@ -3,20 +3,21 @@
 public class PlayerMovment : MonoBehaviour
 {
     private SceneLoader sceneLoader = null;
+    public Fart _fart = null;
     private Rigidbody playerRb = null;
     private Player _player = null;
     public Touch touch;
 
-    [Header("Speed")]
-    public float speed = 20f;
-    public bool isRuning = true;
+    public ParticleSystem particle = null;
 
-    [Header("Jump")]
-    public bool allowJump = true;
-    public float jumpForce = 20f;
-    public float jumpCooldown = 1f;
+    [Header("Speed & Ground")]
+    [SerializeField] float speed = 20f;
+
+    [Header("Fly")]
+    public float fartForce = 7f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    public bool isFarting = false;
 
 
 
@@ -25,29 +26,30 @@ public class PlayerMovment : MonoBehaviour
         sceneLoader = GameObject.FindWithTag("SceneLoader").GetComponent<SceneLoader>();
         playerRb = GetComponent<Rigidbody>();
         _player = GetComponent<Player>();
+        _fart = GetComponent<Fart>();
+        particle = this.GetComponentInChildren<ParticleSystem>();
+
 
     }
+
+    [System.Obsolete]
+    private void Start()
+    {
+        particle.enableEmission = false;
+    }
+
+    [System.Obsolete]
     void Update()
     {
         Move();
+        DoubleTapFly();
+        JumpControl();
     }
 
-    void FixedUpdate()
-    {
-        if (isRuning)
-        {
-            DoubleTapJump();
-            JumpControl();
-        }
-    }
+
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("FlyCollider"))
-        {
-            isRuning = false;
-            playerRb.useGravity = false;
-        }
 
         if (other.gameObject.CompareTag("FlyingWall"))
         {
@@ -72,11 +74,8 @@ public class PlayerMovment : MonoBehaviour
                     Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3
                     (firstTouch.position.x, firstTouch.position.y, Camera.main.WorldToScreenPoint(transform.position).z));
 
-                    if (isRuning)
-                    {
-                        touchedPos.y = transform.position.y;
-                        touchedPos.x = transform.position.x;
-                    }
+                    touchedPos.y = transform.position.y;
+                    touchedPos.x = transform.position.x;
 
                     transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime * speed);
                 }
@@ -84,18 +83,24 @@ public class PlayerMovment : MonoBehaviour
         }
     }
 
-    public void DoubleTapJump()
+    [System.Obsolete]
+    public void DoubleTapFly()
     {
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
-            if (touch.tapCount == 2 && _player.hitGround)
+            if (touch.tapCount == 2 && _fart.curFart > 0)
             {
-                if (touch.phase == TouchPhase.Began)
+                if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
                 {
-                    playerRb.velocity = Vector3.up * jumpForce;
-                }
 
+                    isFarting = true;
+                    playerRb.velocity = Vector3.up * fartForce;
+                }
+                else
+                {
+                    isFarting = false;
+                }
             }
 
         }

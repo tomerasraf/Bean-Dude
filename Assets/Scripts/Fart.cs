@@ -7,9 +7,8 @@ public class Fart : MonoBehaviour
     Player _player = null;
     PlayerMovment _playerMovment = null;
     public FartBar fartBar;
-    public float minFart = 0;
     public float maxFart = 10f;
-    private float fartDecreaseRate = 2f;
+    private float fartBurnRate = 10f;
     public bool isFalling = false;
     public float curFart;
 
@@ -21,32 +20,35 @@ public class Fart : MonoBehaviour
 
     void Start()
     {
-        curFart = 5f;
+        curFart = 0;
         fartBar.SetMaxFart(maxFart);
         fartBar.SetFart(curFart);
     }
-
+    [System.Obsolete]
     void Update()
     {
         DecreaseFartInAir();
-        GravityInAir();
     }
 
-    void DecreaseFartInAir()
+    [System.Obsolete]
+    public void DecreaseFartInAir()
     {
-        if (!_player.hitGround && curFart > 0)
+        if (curFart > 0 && _playerMovment.isFarting)
         {
-            curFart -= Time.deltaTime * fartDecreaseRate;
+            curFart -= Time.deltaTime * fartBurnRate;
+            _playerMovment.particle.enableEmission = true;
             fartBar.SetFart(curFart);
         }
-    }
-
-    void GravityInAir()
-    {
-        if (!_playerMovment.isRuning && curFart <= 0)
+        else
         {
-            isFalling = true;
-            _playerMovment.GetComponent<Rigidbody>().useGravity = true;
+            _playerMovment.particle.enableEmission = false;
+        }
+
+        if (curFart <= 0)
+        {
+            _playerMovment.isFarting = false;
+            _playerMovment.particle.enableEmission = false;
         }
     }
+
 }

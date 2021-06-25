@@ -20,7 +20,14 @@ public class Player : MonoBehaviour
         {
             float check = (_charCollider.height + _charCollider.radius) / 1.9f;
             hitGround = hit.distance <= check;
+            Debug.Log(hit.distance);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down);
     }
 
 }

@@ -19,7 +19,7 @@ public class Bean : MonoBehaviour
         {
             if (_fart.curFart < _fart.maxFart)
             {
-                _fart.curFart++;
+                _fart.curFart += 10;
                 _fartBar.SetFart(_fart.curFart);
             }
             Destroy(gameObject);
