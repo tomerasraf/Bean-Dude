@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Points : MonoBehaviour
+public class RegularPoints : MonoBehaviour
 {
     [Header("Points")]
     private int regularPoint = 3;
@@ -21,6 +21,7 @@ public class Points : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             curPoints += regularPoint;
+            points.text = curPoints.ToString();
             Destroy(gameObject);
         }
     }

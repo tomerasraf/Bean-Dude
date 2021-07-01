@@ -18,6 +18,7 @@ public class PlayerMovment : MonoBehaviour
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public bool isFarting = false;
+    public Animator _anim = null;
 
 
 
@@ -28,8 +29,7 @@ public class PlayerMovment : MonoBehaviour
         _player = GetComponent<Player>();
         _fart = GetComponent<Fart>();
         particle = this.GetComponentInChildren<ParticleSystem>();
-
-
+        _anim = GetComponentInParent<Animator>();
     }
 
     [System.Obsolete]
@@ -41,6 +41,16 @@ public class PlayerMovment : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
+        if (_player.hitGround)
+        {
+            _anim.SetBool("OnGround", true);
+        }
+        else
+        {
+            _anim.SetBool("OnGround", false);
+        }
+
+
         Move();
         DoubleTapFly();
         JumpControl();
@@ -86,23 +96,42 @@ public class PlayerMovment : MonoBehaviour
     [System.Obsolete]
     public void DoubleTapFly()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && _player.hitGround)
         {
             touch = Input.GetTouch(0);
             if (touch.tapCount == 2 && _fart.curFart > 0)
             {
                 if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
                 {
-
                     isFarting = true;
+                    _anim.SetBool("IsJumping", true);
                     playerRb.velocity = Vector3.up * fartForce;
                 }
                 else
                 {
                     isFarting = false;
+                    _anim.SetBool("IsJumping", false);
                 }
             }
 
+        }
+        else if (Input.touchCount > 0 && !_player.hitGround)
+        {
+            touch = Input.GetTouch(0);
+            if (_fart.curFart > 0)
+            {
+                if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
+                {
+                    isFarting = true;
+                    _anim.SetBool("IsJumping", true);
+                    playerRb.velocity = Vector3.up * fartForce;
+                }
+                else
+                {
+                    isFarting = false;
+                    _anim.SetBool("IsJumping", false);
+                }
+            }
         }
 
     }

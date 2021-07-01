@@ -3,9 +3,10 @@
 public class Bean : MonoBehaviour
 {
     private Fart _fart;
+    public int beanVal = 5;
     private FartBar _fartBar = null;
     float floatSpeed = 3.0f;
-    private bool bounce = true;
+    // private bool bounce = true;
 
     private void Awake()
     {
@@ -19,7 +20,7 @@ public class Bean : MonoBehaviour
         {
             if (_fart.curFart < _fart.maxFart)
             {
-                _fart.curFart += 10;
+                _fart.curFart += beanVal;
                 _fartBar.SetFart(_fart.curFart);
             }
             Destroy(gameObject);
@@ -30,24 +31,24 @@ public class Bean : MonoBehaviour
     {
         floatSpeed = Random.Range(1f, 3f);
 
-        if (bounce)
-        {
-            transform.Translate(Vector3.up * floatSpeed * Time.deltaTime);
-        }
-        else
-        {
-            transform.Translate(-Vector3.up * floatSpeed * Time.deltaTime);
-        }
+        // if (bounce)
+        // {
+        //     transform.Translate(Vector3.up * floatSpeed * Time.deltaTime);
+        // }
+        // else
+        // {
+        //     transform.Translate(-Vector3.up * floatSpeed * Time.deltaTime);
+        // }
 
-        if (transform.position.y >= 1.5f)
-        {
-            bounce = false;
-        }
+        // if (transform.position.y >= 1.5f)
+        // {
+        //     bounce = false;
+        // }
 
-        if (transform.position.y <= 1f)
-        {
-            bounce = true;
-        }
+        // if (transform.position.y <= 1f)
+        // {
+        //     bounce = true;
+        // }
 
     }
 }

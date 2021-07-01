@@ -11,11 +11,13 @@ public class Fart : MonoBehaviour
     private float fartBurnRate = 10f;
     public bool isFalling = false;
     public float curFart;
+    private Animator _anim;
 
     void Awake()
     {
         _player = GameObject.FindWithTag("Player").GetComponent<Player>();
         _playerMovment = _player.GetComponent<PlayerMovment>();
+        _anim = _player.GetComponentInParent<Animator>();
     }
 
     void Start()
@@ -46,6 +48,7 @@ public class Fart : MonoBehaviour
 
         if (curFart <= 0)
         {
+            _anim.SetBool("IsJumping", false);
             _playerMovment.isFarting = false;
             _playerMovment.particle.enableEmission = false;
         }

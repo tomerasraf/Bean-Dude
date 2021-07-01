@@ -18,16 +18,13 @@ public class Player : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit))
         {
-            float check = (_charCollider.height + _charCollider.radius) / 1.9f;
+            float check = (_charCollider.height + _charCollider.radius) / 35f;
             hitGround = hit.distance <= check;
-            Debug.Log(hit.distance);
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down);
+        else
+        {
+            hitGround = false;
+        }
     }
 
 }
