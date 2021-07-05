@@ -703,6 +703,21 @@ MonoBehaviour:
   lowJumpMultiplier: 15
   isFarting: 0
   _anim: {fileID: 0}
+--- !u!114 &290101304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290101297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd365fbfffe1ae241b5b665a747071c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsText: {fileID: 1074103360}
+  curPoints: 0
+  userPoints: 0
 --- !u!1 &295811628
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpecPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 418519814391961330, guid: f3b9d37765309ee409cab273d6a3f465,
+        type: 3}
+      propertyPath: m_TagString
+      value: specPoint
       objectReference: {fileID: 0}
     - target: {fileID: 3005666195711700736, guid: f3b9d37765309ee409cab273d6a3f465,
         type: 3}
@@ -9139,11 +9159,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979345375}
     m_Modifications:
-    - target: {fileID: 4382661523935172290, guid: 9af066e0085ae8a48a534e2e3ed4dcab,
-        type: 3}
-      propertyPath: points
-      value: 
-      objectReference: {fileID: 1074103360}
     - target: {fileID: 4382661523935172291, guid: 9af066e0085ae8a48a534e2e3ed4dcab,
         type: 3}
       propertyPath: m_LocalPosition.x

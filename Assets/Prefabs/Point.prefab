@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4382661523935172300}
   - component: {fileID: 4382661523935172301}
   - component: {fileID: 4382661523935172302}
-  - component: {fileID: 4382661523935172290}
+  - component: {fileID: 6405197001718615944}
   m_Layer: 0
   m_Name: Point
   m_TagString: regPoint
@@ -94,7 +94,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4382661523935172290
+--- !u!114 &6405197001718615944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

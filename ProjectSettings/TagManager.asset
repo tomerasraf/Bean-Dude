@@ -12,6 +12,7 @@ TagManager:
   - SceneLoader
   - FartBar
   - regPoint
+  - specPoint
   layers:
   - Default
   - TransparentFX
