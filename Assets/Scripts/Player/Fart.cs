@@ -22,7 +22,7 @@ public class Fart : MonoBehaviour
 
     void Start()
     {
-        curFart = 0;
+        curFart = maxFart;
         fartBar.SetMaxFart(maxFart);
         fartBar.SetFart(curFart);
     }
@@ -52,6 +52,12 @@ public class Fart : MonoBehaviour
             _playerMovment.isFarting = false;
             _playerMovment.particle.enableEmission = false;
         }
+
+        if (curFart > maxFart)
+        {
+            curFart = maxFart;
+        }
+
     }
 
 }

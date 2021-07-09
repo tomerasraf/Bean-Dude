@@ -5,7 +5,7 @@ public class SceneLoader : MonoBehaviour
 {
     public void RestartLevel()
     {
-        SceneManager.LoadScene("Protoype01");
+        SceneManager.LoadScene("Level1");
     }
 
     public void StartGame()

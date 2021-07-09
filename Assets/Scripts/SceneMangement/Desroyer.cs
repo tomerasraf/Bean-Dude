@@ -8,4 +8,6 @@ public class Desroyer : MonoBehaviour
     {
         Destroy(other.gameObject);
     }
+
+    
 }

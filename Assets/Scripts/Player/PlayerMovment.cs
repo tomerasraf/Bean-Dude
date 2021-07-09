@@ -2,23 +2,26 @@
 
 public class PlayerMovment : MonoBehaviour
 {
+    [Header("World Speed")]
+    public MoveToMe _worldSpeed = null;
+    public float maxWorldSpeed = 25f;
+    public float minWorldSpeed = 15f;
     private SceneLoader sceneLoader = null;
-    public Fart _fart = null;
-    private Rigidbody playerRb = null;
     private Player _player = null;
-    public Touch touch;
-
+    [Header("Player Needed Attachments")]
+    public Fart _fart = null;
     public ParticleSystem particle = null;
-
-    [Header("Speed & Ground")]
-    [SerializeField] float speed = 20f;
+    public Animator _anim = null;
+    public Touch touch;
+    private float PlayerSwipeSpeed = 15f;
+    private Rigidbody playerRb = null;
 
     [Header("Fly")]
+    public float onFartSpeed = 2.5f;
     public float fartForce = 7f;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
     public bool isFarting = false;
-    public Animator _anim = null;
 
 
 
@@ -30,6 +33,7 @@ public class PlayerMovment : MonoBehaviour
         _fart = GetComponent<Fart>();
         particle = this.GetComponentInChildren<ParticleSystem>();
         _anim = GetComponentInParent<Animator>();
+        _worldSpeed = GameObject.FindWithTag("WorldSpeed").GetComponent<MoveToMe>();
     }
 
     [System.Obsolete]
@@ -54,6 +58,7 @@ public class PlayerMovment : MonoBehaviour
         Move();
         DoubleTapFly();
         JumpControl();
+        SpeedUpOnFart();
     }
 
 
@@ -87,7 +92,7 @@ public class PlayerMovment : MonoBehaviour
                     touchedPos.y = transform.position.y;
                     touchedPos.x = transform.position.x;
 
-                    transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime * speed);
+                    transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime * PlayerSwipeSpeed);
                 }
             }
         }
@@ -147,4 +152,30 @@ public class PlayerMovment : MonoBehaviour
             playerRb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
+
+
+    void SpeedUpOnFart()
+    {
+        if (isFarting)
+        {
+            _worldSpeed.speed += onFartSpeed * Time.deltaTime;
+        }
+        else
+        {
+            _worldSpeed.speed -= onFartSpeed * Time.deltaTime;
+        }
+
+        if (_worldSpeed.speed >= maxWorldSpeed)
+        {
+            _worldSpeed.speed = maxWorldSpeed;
+        }
+
+        if (_worldSpeed.speed <= minWorldSpeed)
+        {
+            _worldSpeed.speed = minWorldSpeed;
+        }
+
+    }
+
+
 }
