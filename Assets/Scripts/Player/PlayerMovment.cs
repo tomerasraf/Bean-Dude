@@ -2,10 +2,11 @@
 
 public class PlayerMovment : MonoBehaviour
 {
-    [Header("World Speed")]
-    public MoveToMe _worldSpeed = null;
-    public float maxWorldSpeed = 25f;
-    public float minWorldSpeed = 15f;
+    [Header("Player Speed")]
+
+    [SerializeField] private float playerSpeed = 5.5f;
+    [SerializeField] private float maxPlayerSpeed = 25f;
+    [SerializeField] private float minPlayerSpeed = 15f;
     private SceneLoader sceneLoader = null;
     private Player _player = null;
     [Header("Player Needed Attachments")]
@@ -13,8 +14,12 @@ public class PlayerMovment : MonoBehaviour
     public ParticleSystem particle = null;
     public Animator _anim = null;
     public Touch touch;
-    private float PlayerSwipeSpeed = 15f;
     private Rigidbody playerRb = null;
+    private Vector3 touchedPos;
+
+    [Header("Player Controller")]
+
+    [SerializeField] private float PlayerSwipeSpeed = 15f;
 
     [Header("Fly")]
     public float onFartSpeed = 2.5f;
@@ -33,7 +38,6 @@ public class PlayerMovment : MonoBehaviour
         _fart = GetComponent<Fart>();
         particle = this.GetComponentInChildren<ParticleSystem>();
         _anim = GetComponentInParent<Animator>();
-        _worldSpeed = GameObject.FindWithTag("WorldSpeed").GetComponent<MoveToMe>();
     }
 
     [System.Obsolete]
@@ -45,6 +49,16 @@ public class PlayerMovment : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
+        MovePlayer();
+        IsPlayerOnGround();
+        PlayerController();
+        DoubleTapFly();
+        JumpControl();
+        SpeedUpOnFart();
+    }
+
+    private void IsPlayerOnGround()
+    {
         if (_player.hitGround)
         {
             _anim.SetBool("OnGround", true);
@@ -53,14 +67,7 @@ public class PlayerMovment : MonoBehaviour
         {
             _anim.SetBool("OnGround", false);
         }
-
-
-        Move();
-        DoubleTapFly();
-        JumpControl();
-        SpeedUpOnFart();
     }
-
 
 
     void OnTriggerEnter(Collider other)
@@ -77,7 +84,12 @@ public class PlayerMovment : MonoBehaviour
         }
     }
 
-    private void Move()
+    private void MovePlayer()
+    {
+        transform.position = transform.position + Vector3.forward * Time.deltaTime * playerSpeed;
+    }
+
+    private void PlayerController()
     {
         if (!GetComponent<Fart>().isFalling)
         {
@@ -86,11 +98,28 @@ public class PlayerMovment : MonoBehaviour
                 Touch firstTouch = Input.GetTouch(0);
                 if (firstTouch.phase == TouchPhase.Stationary || firstTouch.phase == TouchPhase.Moved)
                 {
-                    Vector3 touchedPos = Camera.main.ScreenToWorldPoint(new Vector3
-                    (firstTouch.position.x, firstTouch.position.y, Camera.main.WorldToScreenPoint(transform.position).z));
+                    touchedPos = Camera.main.ScreenToWorldPoint(new Vector3
+                   (firstTouch.position.x, firstTouch.position.y, Camera.main.WorldToScreenPoint(transform.position).z));
 
+
+                    // if (touchedPos.x >= 5f)
+                    // {
+                    //     touchedPos.x = 5f;
+                    // }
+
+                    // if (touchedPos.x <= -5f)
+                    // {
+                    //     touchedPos.x = -5f;
+                    // }
+
+                    // Clamping the touched Position Value
+                    Vector3 clampedPosition = touchedPos;
+                    clampedPosition.x = Mathf.Clamp(clampedPosition.x, -5f, 5f);
+                    touchedPos = clampedPosition;
+
+                    // 
                     touchedPos.y = transform.position.y;
-                    touchedPos.x = transform.position.x;
+                    touchedPos.z = transform.position.z;
 
                     transform.position = Vector3.Lerp(transform.position, touchedPos, Time.deltaTime * PlayerSwipeSpeed);
                 }
@@ -158,21 +187,21 @@ public class PlayerMovment : MonoBehaviour
     {
         if (isFarting)
         {
-            _worldSpeed.speed += onFartSpeed * Time.deltaTime;
+            playerSpeed += onFartSpeed * Time.deltaTime;
         }
         else
         {
-            _worldSpeed.speed -= onFartSpeed * Time.deltaTime;
+            playerSpeed -= onFartSpeed * Time.deltaTime;
         }
 
-        if (_worldSpeed.speed >= maxWorldSpeed)
+        if (playerSpeed >= maxPlayerSpeed)
         {
-            _worldSpeed.speed = maxWorldSpeed;
+            playerSpeed = maxPlayerSpeed;
         }
 
-        if (_worldSpeed.speed <= minWorldSpeed)
+        if (playerSpeed <= minPlayerSpeed)
         {
-            _worldSpeed.speed = minWorldSpeed;
+            playerSpeed = minPlayerSpeed;
         }
 
     }

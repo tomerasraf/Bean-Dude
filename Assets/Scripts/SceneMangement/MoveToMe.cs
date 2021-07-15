@@ -8,6 +8,6 @@ public class MoveToMe : MonoBehaviour
 
     void Update()
     {
-        transform.position = transform.position - Vector3.left * Time.deltaTime * speed;
+        transform.position = transform.position + Vector3.forward * Time.deltaTime * speed;
     }
 }

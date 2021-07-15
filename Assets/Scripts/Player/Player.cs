@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     CapsuleCollider _charCollider = null;
     public bool hitGround = false;
+
     private void Awake()
     {
         _charCollider = GetComponent<CapsuleCollider>();
