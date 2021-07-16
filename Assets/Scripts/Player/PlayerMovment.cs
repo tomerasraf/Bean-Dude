@@ -3,7 +3,6 @@
 public class PlayerMovment : MonoBehaviour
 {
     [Header("Player Speed")]
-
     [SerializeField] private float playerSpeed = 5.5f;
     [SerializeField] private float maxPlayerSpeed = 25f;
     [SerializeField] private float minPlayerSpeed = 15f;
@@ -20,8 +19,6 @@ public class PlayerMovment : MonoBehaviour
     [Header("Player Controller")]
 
     [SerializeField] private float PlayerSwipeSpeed = 15f;
-
-    [Header("Fly")]
     public float onFartSpeed = 2.5f;
     public float fartForce = 7f;
     public float fallMultiplier = 2.5f;
@@ -46,13 +43,12 @@ public class PlayerMovment : MonoBehaviour
         particle.enableEmission = false;
     }
 
-    [System.Obsolete]
+
     void Update()
     {
         MovePlayer();
         IsPlayerOnGround();
         PlayerController();
-        DoubleTapFly();
         JumpControl();
         SpeedUpOnFart();
     }
@@ -102,16 +98,6 @@ public class PlayerMovment : MonoBehaviour
                    (firstTouch.position.x, firstTouch.position.y, Camera.main.WorldToScreenPoint(transform.position).z));
 
 
-                    // if (touchedPos.x >= 5f)
-                    // {
-                    //     touchedPos.x = 5f;
-                    // }
-
-                    // if (touchedPos.x <= -5f)
-                    // {
-                    //     touchedPos.x = -5f;
-                    // }
-
                     // Clamping the touched Position Value
                     Vector3 clampedPosition = touchedPos;
                     clampedPosition.x = Mathf.Clamp(clampedPosition.x, -5f, 5f);
@@ -127,47 +113,19 @@ public class PlayerMovment : MonoBehaviour
         }
     }
 
-    [System.Obsolete]
-    public void DoubleTapFly()
+    public void SwipeToFly()
     {
-        if (Input.touchCount > 0 && _player.hitGround)
+        if (Input.touchCount < 0 && Input.touches[0].phase == TouchPhase.Stationary || Input.touches[0].phase == TouchPhase.Moved)
         {
-            touch = Input.GetTouch(0);
-            if (touch.tapCount == 2 && _fart.curFart > 0)
-            {
-                if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
-                {
-                    isFarting = true;
-                    _anim.SetBool("IsJumping", true);
-                    playerRb.velocity = Vector3.up * fartForce;
-                }
-                else
-                {
-                    isFarting = false;
-                    _anim.SetBool("IsJumping", false);
-                }
-            }
-
+            isFarting = true;
+            _anim.SetBool("IsJumping", true);
+            playerRb.velocity = Vector3.up * fartForce;
         }
-        else if (Input.touchCount > 0 && !_player.hitGround)
+        else
         {
-            touch = Input.GetTouch(0);
-            if (_fart.curFart > 0)
-            {
-                if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
-                {
-                    isFarting = true;
-                    _anim.SetBool("IsJumping", true);
-                    playerRb.velocity = Vector3.up * fartForce;
-                }
-                else
-                {
-                    isFarting = false;
-                    _anim.SetBool("IsJumping", false);
-                }
-            }
+            isFarting = false;
+            _anim.SetBool("IsJumping", false);
         }
-
     }
 
     void JumpControl()

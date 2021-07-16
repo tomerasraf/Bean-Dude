@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, Vector3.down, out hit))
         {
-            float check = (_charCollider.height + _charCollider.radius) / 35f;
+            float check = (_charCollider.height + _charCollider.radius) / 20f;
             hitGround = hit.distance <= check;
         }
         else
