@@ -5,15 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bean
-  - Toilet
-  - FlyCollider
   - FlyingWall
-  - EndLine
   - SceneLoader
   - FartBar
   - regPoint
   - specPoint
-  - WorldSpeed
+  - Spikes
+  - FallCollider
+  - Razor
+  - Fan
   layers:
   - Default
   - TransparentFX

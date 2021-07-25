@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class SwipeDetection : MonoBehaviour
 {
-    [SerializeField] private PlayerMovment _player;
-    [SerializeField] private Fart _fart;
+    private PlayerMovment _playerMovment = null;
+    private Player _player = null;
+    private Fart _fart;
     private Vector2 startPos;
-    public int pixelDistToDetect = 20;
+    public int pixelDistToDetect = 50;
     private bool fingerDown;
 
     private void Awake()
     {
-        _player = GameObject.FindWithTag("Player").GetComponent<PlayerMovment>();
-        _fart = _player.GetComponent<Fart>();
+        _playerMovment = GameObject.FindWithTag("Player").GetComponent<PlayerMovment>();
+        _fart = _playerMovment.GetComponent<Fart>();
+        _player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
     private void Update()
     {
-        DetectSwipeUp();
+        DetectSwipe();
     }
 
-    private void DetectSwipeUp()
+    private void DetectSwipe()
     {
         if (fingerDown == false && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began)
         {
@@ -35,15 +37,28 @@ public class SwipeDetection : MonoBehaviour
             {
                 if (_fart.curFart > 0)
                 {
-                    _player.SwipeToFly();
+                    _playerMovment.SwipeToFly();
                 }
 
             }
         }
+        if (fingerDown && !_playerMovment.isFarting)
+        {
+            if (Input.touches[0].position.y <= startPos.y - pixelDistToDetect)
+            {
+                if (!_player.hitGround)
+                {
+                    _playerMovment.SwipeToFall();
+                }
+                fingerDown = false;
 
-        if (fingerDown && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Ended)
+            }
+        }
+
+        if (fingerDown && Input.touches[0].phase == TouchPhase.Ended)
         {
             fingerDown = false;
         }
     }
+
 }

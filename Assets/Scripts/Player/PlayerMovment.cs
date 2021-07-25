@@ -6,7 +6,6 @@ public class PlayerMovment : MonoBehaviour
     [SerializeField] private float playerSpeed = 5.5f;
     [SerializeField] private float maxPlayerSpeed = 25f;
     [SerializeField] private float minPlayerSpeed = 15f;
-    private SceneLoader sceneLoader = null;
     private Player _player = null;
     [Header("Player Needed Attachments")]
     public Fart _fart = null;
@@ -19,17 +18,17 @@ public class PlayerMovment : MonoBehaviour
     [Header("Player Controller")]
 
     [SerializeField] private float PlayerSwipeSpeed = 15f;
-    public float onFartSpeed = 2.5f;
-    public float fartForce = 7f;
-    public float fallMultiplier = 2.5f;
-    public float lowJumpMultiplier = 2f;
+    [SerializeField] float SwipeToFallSpeed = 2f;
+    [SerializeField] float onFartSpeed = 2.5f;
+    [SerializeField] float fartForce = 7f;
+    [SerializeField] float fallMultiplier = 2.5f;
+    [SerializeField] float lowJumpMultiplier = 2f;
     public bool isFarting = false;
 
 
 
     private void Awake()
     {
-        sceneLoader = GameObject.FindWithTag("SceneLoader").GetComponent<SceneLoader>();
         playerRb = GetComponent<Rigidbody>();
         _player = GetComponent<Player>();
         _fart = GetComponent<Fart>();
@@ -62,21 +61,6 @@ public class PlayerMovment : MonoBehaviour
         else
         {
             _anim.SetBool("OnGround", false);
-        }
-    }
-
-
-    void OnTriggerEnter(Collider other)
-    {
-
-        if (other.gameObject.CompareTag("FlyingWall"))
-        {
-            sceneLoader.RestartLevel();
-        }
-
-        if (other.gameObject.CompareTag("EndLine"))
-        {
-            sceneLoader.RestartLevel();
         }
     }
 
@@ -120,12 +104,22 @@ public class PlayerMovment : MonoBehaviour
             isFarting = true;
             _anim.SetBool("IsJumping", true);
             playerRb.velocity = Vector3.up * fartForce;
+
+            //clamp the hight velocity value
+            Vector3 clampedHightPosition = transform.position;
+            clampedHightPosition.y = Mathf.Clamp(clampedHightPosition.y, 0f, 9f);
+            transform.position = clampedHightPosition;
         }
         else
         {
             isFarting = false;
             _anim.SetBool("IsJumping", false);
         }
+    }
+
+    public void SwipeToFall()
+    {
+        playerRb.AddForce(Vector3.down * SwipeToFallSpeed, ForceMode.Impulse);
     }
 
     void JumpControl()

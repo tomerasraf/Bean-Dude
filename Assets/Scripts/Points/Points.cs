@@ -26,4 +26,18 @@ public class Points : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
+
+    public void DisplayRegularPoints(Collider collider)
+    {
+        curPoints += 3;
+        pointsText.text = curPoints.ToString();
+        Destroy(collider.gameObject);
+    }
+    public void DisplaySpacielPoints(Collider collider)
+    {
+        curPoints += 5;
+        pointsText.text = curPoints.ToString();
+        Destroy(collider.gameObject);
+    }
 }
+

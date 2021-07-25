@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class FallCollider : MonoBehaviour
 {
-    SceneLoader _sceneLoader = null;
+    Transform playerTranform = null;
+    float OffsetY = -10f;
+
     private void Awake()
     {
-        _sceneLoader = GameObject.FindGameObjectWithTag("SceneLoader").GetComponent<SceneLoader>();
+        playerTranform = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
 
-    // Update is called once per frame
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            _sceneLoader.RestartLevel();
-        }
+        transform.position = new Vector3(playerTranform.position.x, OffsetY, playerTranform.position.z);
     }
 }
