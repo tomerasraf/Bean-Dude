@@ -350,10 +350,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.76
+  m_Radius: 0.55
   m_Height: 3.090228
   m_Direction: 1
-  m_Center: {x: -0.0070312023, y: 1.3756447, z: 0.06085515}
+  m_Center: {x: 0, y: 1.3756447, z: 0}
 --- !u!54 &290101300
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -422,8 +422,8 @@ MonoBehaviour:
   SwipeToFallSpeed: 40
   onFartSpeed: 30
   fartForce: 6
-  fallMultiplier: 5
-  lowJumpMultiplier: 4
+  fallMultiplier: 2
+  lowJumpMultiplier: 2
   isFarting: 0
 --- !u!114 &290101304
 MonoBehaviour:
@@ -763,7 +763,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPlatform: {fileID: 385126780}
   levelPartList:
-  - {fileID: 5246933194168067087, guid: 9adb34afea7bac941968a74a13f57f61, type: 3}
   - {fileID: 7432839075296212684, guid: 65cf7559734de354081127da8396b93e, type: 3}
   - {fileID: 5724585210360233215, guid: 29f83888f63f4e3479376c8e113b5a8e, type: 3}
   _player: {fileID: 290101301}
@@ -6250,7 +6249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1929695052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7522,6 +7521,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 43164177, guid: 8cc62360a39423748afe7e5fedb7974e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.000665
+      objectReference: {fileID: 0}
     - target: {fileID: 1652587756567312714, guid: 8cc62360a39423748afe7e5fedb7974e,
         type: 3}
       propertyPath: m_Name
@@ -7581,6 +7584,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1652587756567312726, guid: 8cc62360a39423748afe7e5fedb7974e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cc62360a39423748afe7e5fedb7974e, type: 3}

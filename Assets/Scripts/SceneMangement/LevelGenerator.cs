@@ -36,10 +36,10 @@ public class LevelGenerator : MonoBehaviour
 
     private Transform SpwanLevelPart(Transform levelPart, Vector3 spwanPosition)
     {
-        Vector3 SpwanOffset = new Vector3(spwanPosition.x, spwanPosition.y, 50f);
-        Transform levelPart_1Clone = Instantiate(levelPart, spwanPosition + SpwanOffset, Quaternion.identity);
+        Vector3 SpwanOffset = new Vector3(spwanPosition.x, spwanPosition.y, 100f);
+        Transform levelPart_Clone = Instantiate(levelPart, spwanPosition + SpwanOffset, Quaternion.identity);
         // levelPart_1Clone.transform.parent = GameObject.Find("Level_1Objects").transform;
-        return levelPart_1Clone;
+        return levelPart_Clone;
 
     }
 

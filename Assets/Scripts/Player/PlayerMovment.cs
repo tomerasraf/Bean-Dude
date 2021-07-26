@@ -107,7 +107,7 @@ public class PlayerMovment : MonoBehaviour
 
             //clamp the hight velocity value
             Vector3 clampedHightPosition = transform.position;
-            clampedHightPosition.y = Mathf.Clamp(clampedHightPosition.y, 0f, 9f);
+            clampedHightPosition.y = Mathf.Clamp(clampedHightPosition.y, -11f, 9f);
             transform.position = clampedHightPosition;
         }
         else
