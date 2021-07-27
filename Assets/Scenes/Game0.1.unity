@@ -418,12 +418,12 @@ MonoBehaviour:
   _fart: {fileID: 0}
   particle: {fileID: 0}
   _anim: {fileID: 0}
-  PlayerSwipeSpeed: 15
+  PlayerSwipeSpeed: 8
   SwipeToFallSpeed: 40
   onFartSpeed: 30
-  fartForce: 6
-  fallMultiplier: 2
-  lowJumpMultiplier: 2
+  fartForce: 7
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 4
   isFarting: 0
 --- !u!114 &290101304
 MonoBehaviour:
@@ -6249,7 +6249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!54 &1929695052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6289,8 +6289,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 364.373, y: 190.54669, z: 3}
-  m_Center: {x: -33.245422, y: -35.55052, z: 0.041078568}
+  m_Size: {x: 15, y: 20, z: 1}
+  m_Center: {x: 0, y: 7.8, z: 0}
 --- !u!4 &1929695055
 Transform:
   m_ObjectHideFlags: 0
@@ -6299,7 +6299,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1929695051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.6, y: 1, z: -100.8}
+  m_LocalPosition: {x: 0, y: 2.5, z: -100.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 290101298}
@@ -7130,7 +7130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
       propertyPath: m_LocalPosition.z
