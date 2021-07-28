@@ -8,7 +8,7 @@ public class SwipeDetection : MonoBehaviour
     private Player _player = null;
     private Fart _fart;
     private Vector2 startPos;
-    public int pixelDistToDetect = 50;
+    public int pixelDistToDetect = 100;
     private bool fingerDown;
 
     private void Awake()
@@ -40,6 +40,11 @@ public class SwipeDetection : MonoBehaviour
                     _playerMovment.SwipeToFly();
                 }
 
+                if (fingerDown && Input.touches[0].phase == TouchPhase.Ended)
+                {
+                    fingerDown = false;
+                }
+
             }
         }
         if (fingerDown && !_playerMovment.isFarting)
@@ -55,10 +60,6 @@ public class SwipeDetection : MonoBehaviour
             }
         }
 
-        if (fingerDown && Input.touches[0].phase == TouchPhase.Ended)
-        {
-            fingerDown = false;
-        }
     }
 
 }

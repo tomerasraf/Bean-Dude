@@ -49,7 +49,7 @@ public class PlayerMovment : MonoBehaviour
         IsPlayerOnGround();
         PlayerController();
         JumpControl();
-        SpeedUpOnFart();
+        // SpeedUpOnFart();
     }
 
     private void IsPlayerOnGround()
