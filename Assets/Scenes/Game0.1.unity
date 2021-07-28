@@ -412,9 +412,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623cf692e47a8204494b2b7fd35d81be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 30
+  playerSpeed: 40
   maxPlayerSpeed: 80
-  minPlayerSpeed: 30
+  minPlayerSpeed: 40
   _fart: {fileID: 0}
   particle: {fileID: 0}
   _anim: {fileID: 0}
@@ -6076,6 +6076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1669877411}
   - component: {fileID: 1669877410}
+  - component: {fileID: 1669877412}
   m_Layer: 0
   m_Name: _GameManager
   m_TagString: Untagged
@@ -6095,7 +6096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa3ccc70594985409506bcc56dbbc53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pixelDistToDetect: 100
 --- !u!4 &1669877411
 Transform:
   m_ObjectHideFlags: 0
@@ -6114,6 +6114,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669877412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669877409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9efb1b9d283040b4e82fee3b7e5d267a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerMovment: {fileID: 290101303}
+  swipeControls: {fileID: 1669877410}
 --- !u!1 &1720758447
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,13 +42,17 @@ public class PlayerMovment : MonoBehaviour
         particle.enableEmission = false;
     }
 
+    private void FixedUpdate()
+    {
+        JumpControl();
+    }
 
     void Update()
     {
         MovePlayer();
         IsPlayerOnGround();
         PlayerController();
-        JumpControl();
+
         // SpeedUpOnFart();
     }
 
