@@ -10,7 +10,7 @@ public class SwipeDetection : MonoBehaviour
     //     private Vector2 startPos;
     //     public int pixelDistToDetect = 100;
     //     private bool fingerDown;
-    //     private bool swipingUp = false;
+    //     private bool swipingUp = false;FF
 
     //     private void Awake()
     //     {
@@ -109,20 +109,29 @@ public class SwipeDetection : MonoBehaviour
             {
                 //Left or rigth
                 if (x < 0)
+                {
                     swipeLeft = true;
+                    Reset();
+                }
+
                 else
                     swipeRight = true;
+                    Reset();
             }
             else
             {
                 //Up or down
                 if (y < 0)
+                {
                     swipeDown = true;
+                    Reset();
+                }
+
                 else
                     swipeUp = true;
             }
 
-            Reset();
+
         }
 
     }

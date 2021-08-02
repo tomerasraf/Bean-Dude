@@ -52,7 +52,6 @@ public class PlayerMovment : MonoBehaviour
         MovePlayer();
         IsPlayerOnGround();
         PlayerController();
-
         // SpeedUpOnFart();
     }
 
@@ -103,22 +102,12 @@ public class PlayerMovment : MonoBehaviour
 
     public void SwipeToFly()
     {
-        if (Input.touchCount < 0 && Input.touches[0].phase == TouchPhase.Stationary || Input.touches[0].phase == TouchPhase.Moved)
-        {
-            isFarting = true;
-            _anim.SetBool("IsJumping", true);
-            playerRb.velocity = Vector3.up * fartForce;
+        playerRb.velocity = Vector3.up * fartForce;
 
-            //clamp the hight velocity value
-            Vector3 clampedHightPosition = transform.position;
-            clampedHightPosition.y = Mathf.Clamp(clampedHightPosition.y, -11f, 9f);
-            transform.position = clampedHightPosition;
-        }
-        else
-        {
-            isFarting = false;
-            _anim.SetBool("IsJumping", false);
-        }
+        //clamp the hight velocity value
+        Vector3 clampedHightPosition = transform.position;
+        clampedHightPosition.y = Mathf.Clamp(clampedHightPosition.y, -11f, 9f);
+        transform.position = clampedHightPosition;
     }
 
     public void SwipeToFall()
