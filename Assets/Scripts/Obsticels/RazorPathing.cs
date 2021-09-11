@@ -12,7 +12,9 @@ public class RazorPathing : MonoBehaviour
 
     private void Awake()
     {
+        PlatformGenerator platformGenerator = GameObject.Find("Platform Generator").GetComponent<PlatformGenerator>();
         razorClone = Instantiate(razor, waypoints[waypointIndex].transform.position, Quaternion.identity);
+        razorClone.parent = platformGenerator.platformCopy.transform;
     }
 
     private void Update()

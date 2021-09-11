@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class PlayerMovment : MonoBehaviour
 {
     [Header("Player Speed")]
-    [SerializeField] private float playerSpeed = 5.5f;
-    [SerializeField] private float maxPlayerSpeed = 25f;
-    [SerializeField] private float minPlayerSpeed = 15f;
+    public float playerSpeed = 5.5f;
+    public float playerIncreaseSpeedRate = 0.2f;
+    public float startPlayerSpeed = 40f;
     private Player _player = null;
     [Header("Player Needed Attachments")]
     public Fart _fart = null;
-    public ParticleSystem particle = null;
+    public ParticleSystem fartParticle = null;
     public Animator _anim = null;
     public Touch touch;
     private Rigidbody playerRb = null;
@@ -19,27 +20,24 @@ public class PlayerMovment : MonoBehaviour
 
     [SerializeField] private float PlayerSwipeSpeed = 15f;
     [SerializeField] float SwipeToFallSpeed = 2f;
-    [SerializeField] float onFartSpeed = 2.5f;
     [SerializeField] float fartForce = 7f;
     [SerializeField] float fallMultiplier = 2.5f;
     [SerializeField] float lowJumpMultiplier = 2f;
     public bool isFarting = false;
-
-
 
     private void Awake()
     {
         playerRb = GetComponent<Rigidbody>();
         _player = GetComponent<Player>();
         _fart = GetComponent<Fart>();
-        particle = this.GetComponentInChildren<ParticleSystem>();
+        fartParticle = this.GetComponentInChildren<ParticleSystem>();
         _anim = GetComponentInParent<Animator>();
     }
 
     [System.Obsolete]
     private void Start()
     {
-        particle.enableEmission = false;
+        fartParticle.enableEmission = false;
     }
 
     private void FixedUpdate()
@@ -126,30 +124,27 @@ public class PlayerMovment : MonoBehaviour
             playerRb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.fixedDeltaTime;
         }
     }
+    // void SpeedUpOnFart()
+    // {
+    //     if (isFarting)
+    //     {
+    //         playerSpeed += onFartSpeed * Time.deltaTime;
+    //     }
+    //     else
+    //     {
+    //         playerSpeed -= onFartSpeed * Time.deltaTime;
+    //     }
 
+    //     if (playerSpeed >= maxPlayerSpeed)
+    //     {
+    //         playerSpeed = maxPlayerSpeed;
+    //     }
 
-    void SpeedUpOnFart()
-    {
-        if (isFarting)
-        {
-            playerSpeed += onFartSpeed * Time.deltaTime;
-        }
-        else
-        {
-            playerSpeed -= onFartSpeed * Time.deltaTime;
-        }
+    //     if (playerSpeed <= minPlayerSpeed)
+    //     {
+    //         playerSpeed = minPlayerSpeed;
+    //     }
 
-        if (playerSpeed >= maxPlayerSpeed)
-        {
-            playerSpeed = maxPlayerSpeed;
-        }
-
-        if (playerSpeed <= minPlayerSpeed)
-        {
-            playerSpeed = minPlayerSpeed;
-        }
-
-    }
-
+    // }
 
 }

@@ -5,18 +5,25 @@ public class Player : MonoBehaviour
 {
     CapsuleCollider _charCollider = null;
     public bool hitGround = false;
-    float distanceTravelled = 0f;
+    public float distanceTravelled = 0f;
+    public float mileStone = 500f;
+    public float curMileStone;
     Vector3 lastPosition;
+    public int distanceTravelledInt;
     [SerializeField] TextMeshProUGUI metersTravelledText = null;
+    PlayerMovment _playerMovment;
 
 
     private void Awake()
     {
         _charCollider = GetComponent<CapsuleCollider>();
+        _playerMovment = GetComponent<PlayerMovment>();
     }
     private void Start()
     {
         lastPosition = transform.position;
+        mileStone = 500f;
+        curMileStone = mileStone;
     }
     private void FixedUpdate()
     {
@@ -26,6 +33,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         CalculateDistance();
+        PlayerSpeedByMilestone();
     }
 
     void GroundCheck()
@@ -46,8 +54,17 @@ public class Player : MonoBehaviour
     {
         distanceTravelled += Vector3.Distance(transform.position, lastPosition);
         lastPosition = transform.position;
-        int distanceTravelledInt = (int)Mathf.Round(distanceTravelled);
+        distanceTravelledInt = (int)Mathf.Round(distanceTravelled);
         metersTravelledText.text = distanceTravelledInt.ToString() + "M";
     }
 
+    void PlayerSpeedByMilestone()
+    {
+        if (distanceTravelled > mileStone)
+        {
+            _playerMovment.playerSpeed += _playerMovment.playerIncreaseSpeedRate;
+            curMileStone = mileStone += distanceTravelled;
+            mileStone = curMileStone;
+        }
+    }
 }

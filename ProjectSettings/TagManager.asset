@@ -5,15 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bean
-  - FlyingWall
   - SceneLoader
   - FartBar
-  - regPoint
-  - specPoint
-  - Spikes
-  - FallCollider
-  - Razor
-  - Fan
+  - PauseMenu
+  - Obsticle
   layers:
   - Default
   - TransparentFX

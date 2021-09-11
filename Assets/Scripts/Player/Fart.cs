@@ -8,7 +8,7 @@ public class Fart : MonoBehaviour
     PlayerMovment _playerMovment = null;
     public FartBar fartBar;
     public float maxFart = 10f;
-    private float fartBurnRate = 10f;
+    [SerializeField] float fartBurnRate = 10f;
     public bool isFalling = false;
     public float curFart;
     private Animator _anim;
@@ -38,19 +38,19 @@ public class Fart : MonoBehaviour
         if (curFart > 0 && _playerMovment.isFarting)
         {
             curFart -= Time.deltaTime * fartBurnRate;
-            _playerMovment.particle.enableEmission = true;
+            _playerMovment.fartParticle.enableEmission = true;
             fartBar.SetFart(curFart);
         }
         else
         {
-            _playerMovment.particle.enableEmission = false;
+            _playerMovment.fartParticle.enableEmission = false;
         }
 
         if (curFart <= 0)
         {
             _anim.SetBool("IsJumping", false);
             _playerMovment.isFarting = false;
-            _playerMovment.particle.enableEmission = false;
+            _playerMovment.fartParticle.enableEmission = false;
         }
 
         if (curFart > maxFart)

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5560546360577096585}
   m_Layer: 0
   m_Name: Wing (2)
-  m_TagString: Fan
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5560546360661377637}
   m_Layer: 0
   m_Name: Wing (1)
-  m_TagString: Fan
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 5560546361490320890}
   m_Layer: 0
   m_Name: Wing
-  m_TagString: Fan
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 5560546361620008124}
   m_Layer: 0
   m_Name: Wing (3)
-  m_TagString: Fan
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 151764237}
   m_Layer: 0
   m_Name: Fan
-  m_TagString: Fan
+  m_TagString: Obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -468,8 +468,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.23563957
+  m_Center: {x: 0, y: 0, z: 0.26436043}
 --- !u!114 &151764237
 MonoBehaviour:
   m_ObjectHideFlags: 0

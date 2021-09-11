@@ -5,7 +5,8 @@ public class Bean : MonoBehaviour
     private Fart _fart;
     public int beanVal = 5;
     private FartBar _fartBar = null;
-    float floatSpeed = 3.0f;
+    [SerializeField] float amplitude = 2f;
+    [SerializeField] float frequency = 2f;
     // private bool bounce = true;
 
     private void Awake()
@@ -16,7 +17,8 @@ public class Bean : MonoBehaviour
 
     private void Update()
     {
-        floatSpeed = Random.Range(1f, 3f);
+        float y = Mathf.Sin(Time.time * frequency) * amplitude;
+        transform.position = new Vector3(transform.position.x, 1.5f + y, transform.position.z);
     }
 
     public void EatBean(Collider collider)
