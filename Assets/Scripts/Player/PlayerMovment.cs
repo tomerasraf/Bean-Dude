@@ -85,7 +85,7 @@ public class PlayerMovment : MonoBehaviour
 
                     // Clamping the touched Position Value
                     Vector3 clampedPosition = touchedPos;
-                    clampedPosition.x = Mathf.Clamp(clampedPosition.x, -5f, 5f);
+                    clampedPosition.x = Mathf.Clamp(clampedPosition.x, -4f, 4f);
                     touchedPos = clampedPosition;
 
                     // 
