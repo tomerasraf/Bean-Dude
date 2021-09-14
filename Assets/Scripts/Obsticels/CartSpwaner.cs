@@ -13,7 +13,10 @@ public class CartSpwaner : MonoBehaviour
     {
         playerPosition = GameObject.FindWithTag("Player").GetComponent<Transform>();
 
-        MoveCart();
+        if (transform.position.z < playerPosition.position.z + 65f)
+        {
+            MoveCart();
+        }
 
         if (transform.position.z < playerPosition.position.z - 100f)
         {
@@ -24,7 +27,7 @@ public class CartSpwaner : MonoBehaviour
 
     void MoveCart()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z * cartSpeed * Time.deltaTime);
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + -cartSpeed * Time.deltaTime);
     }
 
     void DestroyCopy(GameObject cartCopy)

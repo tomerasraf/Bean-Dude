@@ -15,8 +15,9 @@ public class PlatformGenerator : MonoBehaviour
     int numberOfPlatforms = 5;
     int safeZone = 130;
 
-    private void Awake() {
-        
+    private void Awake()
+    {
+
     }
 
     private void Start()

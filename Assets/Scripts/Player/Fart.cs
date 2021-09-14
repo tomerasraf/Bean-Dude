@@ -7,8 +7,8 @@ public class Fart : MonoBehaviour
     Player _player = null;
     PlayerMovment _playerMovment = null;
     public FartBar fartBar;
-    public float maxFart = 10f;
-    [SerializeField] float fartBurnRate = 10f;
+    public float maxFart = 1f;
+    [SerializeField] float fartBurnRate = 0.1f;
     public bool isFalling = false;
     public float curFart;
     private Animator _anim;

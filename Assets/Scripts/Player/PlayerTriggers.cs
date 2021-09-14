@@ -17,7 +17,7 @@ public class PlayerTriggers : MonoBehaviour
 
     private void Update()
     {
-        // _bean = GameObject.FindWithTag("Bean").GetComponent<Bean>();
+        _bean = GameObject.FindWithTag("Bean").GetComponent<Bean>();
     }
 
     private void OnTriggerEnter(Collider other)

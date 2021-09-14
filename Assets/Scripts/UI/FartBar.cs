@@ -3,16 +3,15 @@ using UnityEngine.UI;
 
 public class FartBar : MonoBehaviour
 {
-    public Slider slider;
+    public Image fillGasImage;
     public void SetMaxFart(float curFart)
     {
-        slider.maxValue = curFart;
-        slider.value = curFart;
+        fillGasImage.fillAmount = curFart;
     }
 
     public void SetFart(float curFart)
     {
-        slider.value = curFart;
+        fillGasImage.fillAmount = curFart;
     }
 
 

@@ -3,7 +3,7 @@
 public class Bean : MonoBehaviour
 {
     private Fart _fart;
-    public int beanVal = 5;
+    public float beanVal = 5;
     private FartBar _fartBar = null;
     [SerializeField] float amplitude = 2f;
     [SerializeField] float frequency = 2f;
@@ -17,8 +17,19 @@ public class Bean : MonoBehaviour
 
     private void Update()
     {
+        FloatFood();
+        RotateFood();
+    }
+
+    void FloatFood()
+    {
         float y = Mathf.Sin(Time.time * frequency) * amplitude;
         transform.position = new Vector3(transform.position.x, 1.5f + y, transform.position.z);
+    }
+
+    void RotateFood()
+    {
+        transform.Rotate(0, 40 * Time.deltaTime, 0, Space.Self);
     }
 
     public void EatBean(Collider collider)
