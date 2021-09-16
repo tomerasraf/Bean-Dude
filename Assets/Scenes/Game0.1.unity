@@ -394,7 +394,7 @@ MonoBehaviour:
   _anim: {fileID: 0}
   PlayerSwipeSpeed: 8.5
   SwipeToFallSpeed: 40
-  fartForce: 8
+  fartForce: 9
   fallMultiplier: 2.5
   lowJumpMultiplier: 4
   isFarting: 0
@@ -6248,6 +6248,9 @@ MonoBehaviour:
   - {fileID: 2907078060991108492, guid: d0dc0f9000738b24eb777e804928bd4e, type: 3}
   - {fileID: 8238928165050336323, guid: bdd9a066ee5514c4bba4aea558b69976, type: 3}
   - {fileID: 702450438562078456, guid: c4ddc27050954b641b579aecfdb07b6d, type: 3}
+  - {fileID: 406440727367900025, guid: 8656cbda7bb68ff499650072fed4eb6f, type: 3}
+  - {fileID: 182559480308527267, guid: 0d7b8df9bcc75134eb10b86d4a486426, type: 3}
+  - {fileID: 8523353644777057882, guid: ca3b95ea2d466ef469804c7dc22b3327, type: 3}
   platformCopy: {fileID: 0}
 --- !u!1 &1669877409
 GameObject:
@@ -7301,7 +7304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -35
       objectReference: {fileID: 0}
     - target: {fileID: 400044, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
       propertyPath: m_LocalRotation.x
