@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450437636782406
 Transform:
@@ -110,7 +110,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450437882432735
 Transform:
@@ -203,7 +203,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450437919382477
 Transform:
@@ -296,7 +296,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450438035665979
 Transform:
@@ -389,7 +389,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450438136143146
 Transform:
@@ -482,7 +482,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450438368895435
 Transform:
@@ -586,7 +586,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 702450439076010134}
-  - {fileID: 2443096057416614329}
   - {fileID: 2443096058993056142}
   - {fileID: 2443096057189061425}
   m_Father: {fileID: 0}
@@ -609,7 +608,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450438788138454
 Transform:
@@ -803,7 +802,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &702450439592843007
 Transform:
@@ -917,100 +916,8 @@ Transform:
   - {fileID: 3034060064570741895}
   - {fileID: 1200150853343332294}
   m_Father: {fileID: 702450438562078459}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2443096057416614335
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2443096057416614329}
-  - component: {fileID: 2443096057416614328}
-  m_Layer: 0
-  m_Name: Spot Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2443096057416614329
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2443096057416614335}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -2.6, y: 54.5, z: -13.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 702450438562078459}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!108 &2443096057416614328
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2443096057416614335}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2204
-  m_Range: 150.71
-  m_SpotAngle: 179
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 1
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &2443096058993056141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +949,7 @@ Transform:
   - {fileID: 7537893443555777657}
   - {fileID: 2443284687835873246}
   m_Father: {fileID: 702450438562078459}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &702450437518686759
 PrefabInstance:
@@ -1054,6 +961,10 @@ PrefabInstance:
     - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1118,6 +1029,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Wall_Vent_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1263419450862458, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4430846267704896, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.47
@@ -1180,6 +1095,10 @@ PrefabInstance:
     - target: {fileID: 1143287809628284, guid: c94bf96d86e137844bf4bbf1265a1f7e, type: 3}
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143287809628284, guid: c94bf96d86e137844bf4bbf1265a1f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4991730771761916, guid: c94bf96d86e137844bf4bbf1265a1f7e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1245,6 +1164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1486874585873242, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4992363990566440, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.25
@@ -1308,6 +1231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Wall_Fridge_02_Preset_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1883232122550886, guid: afe8f3712f37dcf4ca0cdff3253f7d99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4303110138089582, guid: afe8f3712f37dcf4ca0cdff3253f7d99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28
@@ -1370,6 +1297,10 @@ PrefabInstance:
     - target: {fileID: 1848753662569384, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848753662569384, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4307748441128144, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1435,6 +1366,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1525188001248594, guid: aa8c828a421a31844a034bb5ed4387d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4446293705216154, guid: aa8c828a421a31844a034bb5ed4387d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.970001
@@ -1499,6 +1434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
@@ -1561,6 +1500,10 @@ PrefabInstance:
     - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_03 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4603543719827382, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1625,6 +1568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.08
@@ -1687,6 +1634,10 @@ PrefabInstance:
     - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1751,6 +1702,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Wall_Vent_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1263419450862458, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4430846267704896, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.44
@@ -1814,6 +1769,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1757034268871618, guid: c5ebed3dda057c74691b228c2794a38c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4476931101385760, guid: c5ebed3dda057c74691b228c2794a38c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -1876,6 +1835,10 @@ PrefabInstance:
     - target: {fileID: 1381532143990688, guid: a9e767fda45825c42b43951ff5448b7a, type: 3}
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1381532143990688, guid: a9e767fda45825c42b43951ff5448b7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4736975379210754, guid: a9e767fda45825c42b43951ff5448b7a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1941,6 +1904,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.67
@@ -2003,6 +1970,10 @@ PrefabInstance:
     - target: {fileID: 1848753662569384, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848753662569384, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4307748441128144, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2067,6 +2038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2129,6 +2104,10 @@ PrefabInstance:
     - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2193,6 +2172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12
       objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
@@ -2256,6 +2239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Wall_Vent_01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1263419450862458, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4430846267704896, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.44
@@ -2315,9 +2302,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 702450439076010134}
     m_Modifications:
+    - target: {fileID: 1390573804405994, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424663822316160, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901029894074058, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903301881851642, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1936773087972146, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Freezer_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936773087972146, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4538716658961068, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2418,6 +2425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_04
       objectReference: {fileID: 0}
+    - target: {fileID: 1218324927371982, guid: dc685632bd3349849a13d2e5ea38b59a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4962137926017492, guid: dc685632bd3349849a13d2e5ea38b59a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.99
@@ -2481,6 +2492,10 @@ PrefabInstance:
     - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4603543719827382, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2546,6 +2561,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1232888910544776, guid: 14e1d8e49d60ed548b1b42a144898665, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4249620452343940, guid: 14e1d8e49d60ed548b1b42a144898665, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.970001
@@ -2608,6 +2627,10 @@ PrefabInstance:
     - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2673,6 +2696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.33
@@ -2736,6 +2763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
@@ -2795,9 +2826,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 702450439076010134}
     m_Modifications:
+    - target: {fileID: 1390573804405994, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1424663822316160, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901029894074058, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1903301881851642, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 1936773087972146, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Freezer_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936773087972146, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4538716658961068, guid: 238d4867fab92dc4e97695852d685d5f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2899,6 +2950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4603543719827382, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17
@@ -2962,6 +3017,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_03 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4603543719827382, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17
@@ -3024,6 +3083,10 @@ PrefabInstance:
     - target: {fileID: 1915188605368310, guid: 5466361744f64634a94caa6ea6c5b4e7, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Checkout_Shelf_Large_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1915188605368310, guid: 5466361744f64634a94caa6ea6c5b4e7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4984508657432580, guid: 5466361744f64634a94caa6ea6c5b4e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3089,6 +3152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_End_Preset_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1439405093602326, guid: b1a631da59517174a9bed26422c523f9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4983238836873646, guid: b1a631da59517174a9bed26422c523f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -3153,6 +3220,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Freezer_02_Insert_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1677996095400442, guid: ff6dffe614512e3418010b53f33433e7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4489497340983164, guid: ff6dffe614512e3418010b53f33433e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -3209,6 +3280,10 @@ PrefabInstance:
     - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3272,6 +3347,10 @@ PrefabInstance:
     - target: {fileID: 1855459348151534, guid: 4f01a41aebdb00e46ab5e8589c158ee2, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Wall_Fridge_01_Preset_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855459348151534, guid: 4f01a41aebdb00e46ab5e8589c158ee2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4431951445270118, guid: 4f01a41aebdb00e46ab5e8589c158ee2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3337,6 +3416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Wall_Vent_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1263419450862458, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4430846267704896, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.44
@@ -3400,6 +3483,10 @@ PrefabInstance:
     - target: {fileID: 1232888910544776, guid: 14e1d8e49d60ed548b1b42a144898665, type: 3}
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1232888910544776, guid: 14e1d8e49d60ed548b1b42a144898665, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4249620452343940, guid: 14e1d8e49d60ed548b1b42a144898665, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3465,6 +3552,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.67
@@ -3527,6 +3618,10 @@ PrefabInstance:
     - target: {fileID: 1848753662569384, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1848753662569384, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4307748441128144, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3591,6 +3686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_05
       objectReference: {fileID: 0}
+    - target: {fileID: 1143287809628284, guid: c94bf96d86e137844bf4bbf1265a1f7e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4991730771761916, guid: c94bf96d86e137844bf4bbf1265a1f7e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30
@@ -3653,6 +3752,10 @@ PrefabInstance:
     - target: {fileID: 1504733237889774, guid: 80a92a21568e3334fb4a7e33fe934de9, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Wall_Fridge_02_Preset_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504733237889774, guid: 80a92a21568e3334fb4a7e33fe934de9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4027234416715184, guid: 80a92a21568e3334fb4a7e33fe934de9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3717,6 +3820,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1757034268871618, guid: c5ebed3dda057c74691b228c2794a38c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4476931101385760, guid: c5ebed3dda057c74691b228c2794a38c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -3779,6 +3886,10 @@ PrefabInstance:
     - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3843,6 +3954,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_03
       objectReference: {fileID: 0}
+    - target: {fileID: 1525188001248594, guid: aa8c828a421a31844a034bb5ed4387d1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4446293705216154, guid: aa8c828a421a31844a034bb5ed4387d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30
@@ -3905,6 +4020,10 @@ PrefabInstance:
     - target: {fileID: 1952831816971570, guid: 6885572f3d3baa64aa48ad1c814a915b, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_End_Preset_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952831816971570, guid: 6885572f3d3baa64aa48ad1c814a915b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4825576321764126, guid: 6885572f3d3baa64aa48ad1c814a915b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3970,6 +4089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1486874585873242, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4992363990566440, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -4033,6 +4156,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1848753662569384, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4307748441128144, guid: 72fd5e433670f1c4eb7eb6d19d0e253c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
@@ -4095,6 +4222,10 @@ PrefabInstance:
     - target: {fileID: 1883232122550886, guid: afe8f3712f37dcf4ca0cdff3253f7d99, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Wall_Fridge_02_Preset_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1883232122550886, guid: afe8f3712f37dcf4ca0cdff3253f7d99, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4303110138089582, guid: afe8f3712f37dcf4ca0cdff3253f7d99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4160,6 +4291,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -4222,6 +4357,10 @@ PrefabInstance:
     - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4286,6 +4425,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Freezer_02_Insert_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1677996095400442, guid: ff6dffe614512e3418010b53f33433e7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4489497340983164, guid: ff6dffe614512e3418010b53f33433e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -4342,6 +4485,10 @@ PrefabInstance:
     - target: {fileID: 1793482155834120, guid: 457c3dd6546fb4d4ebfa5343a240bb77, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Checkout_Shelf_Large_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793482155834120, guid: 457c3dd6546fb4d4ebfa5343a240bb77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4263308801613848, guid: 457c3dd6546fb4d4ebfa5343a240bb77, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4407,6 +4554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Wall_Fridge_01_Preset_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1855459348151534, guid: 4f01a41aebdb00e46ab5e8589c158ee2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4431951445270118, guid: 4f01a41aebdb00e46ab5e8589c158ee2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -4470,6 +4621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -4532,6 +4687,10 @@ PrefabInstance:
     - target: {fileID: 1486874585873242, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486874585873242, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4992363990566440, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4597,6 +4756,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1218324927371982, guid: dc685632bd3349849a13d2e5ea38b59a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4962137926017492, guid: dc685632bd3349849a13d2e5ea38b59a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.98
@@ -4659,6 +4822,10 @@ PrefabInstance:
     - target: {fileID: 1757034268871618, guid: c5ebed3dda057c74691b228c2794a38c, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757034268871618, guid: c5ebed3dda057c74691b228c2794a38c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4476931101385760, guid: c5ebed3dda057c74691b228c2794a38c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4724,6 +4891,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Market_Wall_Fridge_02_Preset_02 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1504733237889774, guid: 80a92a21568e3334fb4a7e33fe934de9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4027234416715184, guid: 80a92a21568e3334fb4a7e33fe934de9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28
@@ -4788,6 +4959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Wall_Vent_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1263419450862458, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4430846267704896, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.47
@@ -4850,6 +5025,10 @@ PrefabInstance:
     - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Aisle_Preset_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1851132537434178, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4603543719827382, guid: 443d26893bbc1914383c91891b2cef1a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4914,6 +5093,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1486874585873242, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4992363990566440, guid: acf92938ab246ea43bb96c1304accfb1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.75
@@ -4976,6 +5159,10 @@ PrefabInstance:
     - target: {fileID: 1263419450862458, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Wall_Vent_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263419450862458, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4430846267704896, guid: d2e58338ec824554b8ac679ea711e5f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5040,6 +5227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Sign_Sale_Poster_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1381532143990688, guid: a9e767fda45825c42b43951ff5448b7a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4736975379210754, guid: a9e767fda45825c42b43951ff5448b7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.980001
@@ -5103,6 +5294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Lighting_Ceiling_Bar_12 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1467921936476204, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4926925997940464, guid: 06d1dc3851b5cf249be7bb8738e6c9dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -5165,6 +5360,10 @@ PrefabInstance:
     - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_Name
       value: SM_Prop_AirDuct_Ceiling_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1902863206168890, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4195477890454462, guid: 2f5b4d2ee5713f946be8fe2480b0e251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5230,6 +5429,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Shelf_Checkout_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846590058501399286, guid: d8c34c2877fb0c5438e34907e9e12f3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846600755277526348, guid: d8c34c2877fb0c5438e34907e9e12f3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846772621498086880, guid: d8c34c2877fb0c5438e34907e9e12f3f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8850694112528193318, guid: d8c34c2877fb0c5438e34907e9e12f3f,
         type: 3}
@@ -5451,10 +5665,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2443096058993056142}
     m_Modifications:
+    - target: {fileID: 3587335193847522017, guid: db5963afb5f737144b51616ebf4cdc46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3589120021262861473, guid: db5963afb5f737144b51616ebf4cdc46,
         type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Fruit_Basket_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589120021262861473, guid: db5963afb5f737144b51616ebf4cdc46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3589336932683713569, guid: db5963afb5f737144b51616ebf4cdc46,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3592650887968099257, guid: db5963afb5f737144b51616ebf4cdc46,
         type: 3}
@@ -5660,6 +5889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Prop_Market_Checkout_Shelf_Large_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795184619257573919, guid: c3af375a2413e644dac4702567da7967,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3af375a2413e644dac4702567da7967, type: 3}
