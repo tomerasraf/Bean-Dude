@@ -9,6 +9,7 @@ TagManager:
   - FartBar
   - PauseMenu
   - Obsticle
+  - Platform Generator
   layers:
   - Default
   - TransparentFX

@@ -12,7 +12,7 @@ public class PlatformGenerator : MonoBehaviour
     private List<GameObject> activePlatfroms = new List<GameObject>();
     float zSpwan = 0;
     float platformLength = 60;
-    int numberOfPlatforms = 7;
+    int numberOfPlatforms = 4;
     int safeZone = 130;
 
     private void Awake()

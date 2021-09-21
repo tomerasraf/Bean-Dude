@@ -7,12 +7,14 @@ public class PlayerTriggers : MonoBehaviour
     PauseMenu _pauseMenu = null;
     private SceneLoader _sceneLoader = null;
     private Bean _bean = null;
+    PlatformGenerator _platfromGenerator;
     [SerializeField] ParticleSystem beanParticle = null;
 
     private void Awake()
     {
         _sceneLoader = GameObject.FindWithTag("SceneLoader").GetComponent<SceneLoader>();
         _pauseMenu = GameObject.Find("Canvas").GetComponent<PauseMenu>();
+        _platfromGenerator = GameObject.FindWithTag("Platform Generator").GetComponent<PlatformGenerator>();
     }
 
     private void Update()
@@ -26,7 +28,8 @@ public class PlayerTriggers : MonoBehaviour
         if (other.CompareTag("Bean"))
         {
             _bean.EatBean(other);
-            Instantiate(beanParticle, other.transform.position, other.transform.rotation);
+            ParticleSystem particleClone = Instantiate(beanParticle, other.transform.position, other.transform.rotation);
+            particleClone.transform.parent = _platfromGenerator.platformCopy.transform;
         }
 
         if (other.CompareTag("Obsticle"))
